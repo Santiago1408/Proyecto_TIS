@@ -11,5 +11,5 @@ import { ReactiveFormsModule } from '@angular/forms';
 export class InputDesplegablesComponent {
   @Input() label: string = '';
   @Input() formControlName!: string;
-  @Input() opciones!: string[];
+  @Input() opciones: string[] = [];
 }
