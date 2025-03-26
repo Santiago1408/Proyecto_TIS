@@ -11,6 +11,8 @@ import { Competidor } from '../competidor.model';
   styleUrl: './inscipcion-competidor.component.css'
 })
 export class InscipcionCompetidorComponent {
+  numeroCompetidores: number=1;
+
   cuadroNombres: string="";
   cuadroApellidos: string="";
   cuadroFechaNacimiento: string="";
@@ -23,11 +25,13 @@ export class InscipcionCompetidorComponent {
   cuadroProvincia: string="";
 
   competidores: Competidor[] = [
-    new Competidor(1, "Josue Santiago", "García Gámez", "14/08/2003", "12402320", "josueg4rcia@gmail.com", "69435058", "San Agustín", "5to", "Cochabamba", "Cercado"),
+    new Competidor(0, "Josue Santiago", "García Gámez", "14/08/2003", "12402320", "josueg4rcia@gmail.com", "69435058", "San Agustín", "5to", "Cochabamba", "Cercado"),
     
   ];
 
   agregarCompetidor(){
-  
+    let nuevoCompetidor = new Competidor(this.numeroCompetidores, this.cuadroNombres, this.cuadroApellidos, this.cuadroFechaNacimiento, this.cuadroCI, this.cuadroEmail, this.cuadroNumCelular, this.cuadroColegio, this.cuadroCurso, this.cuadroDepartamento, this.cuadroProvincia); 
+    this.competidores.push(nuevoCompetidor);
+    this.numeroCompetidores++;
   }
 }
