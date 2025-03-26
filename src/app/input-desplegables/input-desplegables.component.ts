@@ -3,6 +3,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-input-desplegables',
+  standalone: true,
   imports: [ReactiveFormsModule],
   templateUrl: './input-desplegables.component.html',
   styleUrl: './input-desplegables.component.css'

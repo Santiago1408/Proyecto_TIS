@@ -3,6 +3,7 @@ import { FormControl, ReactiveFormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-input-fecha',
+  standalone: true,
   imports: [ReactiveFormsModule],
   templateUrl: './input-fecha.component.html',
   styleUrl: './input-fecha.component.css'

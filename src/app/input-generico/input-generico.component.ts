@@ -3,6 +3,7 @@ import { ReactiveFormsModule, FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-input-generico',
+  standalone: true,
   imports: [ReactiveFormsModule],
   templateUrl: './input-generico.component.html',
   styleUrl: './input-generico.component.css'

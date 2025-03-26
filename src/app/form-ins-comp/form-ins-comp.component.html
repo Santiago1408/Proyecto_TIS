@@ -1,1 +1,25 @@
-<button [type]="type">{{ label }}</button>
+<div class="contenedor-formulario">
+    <h2>Formulario de Inscripción</h2>
+    <form [formGroup] = "formInscripciones" (ngSubmit)="onSubmit()">
+
+        <app-input-generico label="Nombres" formControlName="nombres"></app-input-generico>
+        <app-input-generico label="Apellidos" formControlName="apellidos"></app-input-generico>
+
+        <app-input-fecha label="Fecha de Nacimiento" formControlName="fechaNacimiento"></app-input-fecha>
+
+        <app-input-generico label="Carnet de Identidad" formControlName="carnetIdentidad"></app-input-generico>
+        <app-input-generico label="Correo Electrónico" formControlName="correoElectronico"></app-input-generico>
+
+        <app-input-generico label="Numero de celular" formControlName="numeroCelular"></app-input-generico>
+        <app-input-generico label="Colegio" formControlName="colegio"></app-input-generico>
+
+        <app-input-desplegables label="Curso" [opciones]="cursos" formControlName="curso"></app-input-desplegables>
+        <app-input-desplegables label="Provincia" [opciones]="provincias" formControlName="provincia"></app-input-desplegables>
+        <app-input-desplegables label="Departamento" [opciones]="departamentos" formControlName="departamento"></app-input-desplegables>
+
+        <div class="botones">
+            <app-boton label="Cancelar" type="button"></app-boton>
+            <app-boton label="Siguiente" type="submit"></app-boton>
+        </div>
+    </form>
+</div>
