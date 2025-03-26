@@ -1,43 +1,48 @@
 <div class="formulario">
     <h2 class="titulo">FORMULARIO DE INSCRIPCION</h2>
     <h2>COMPETIDOR</h2>
-    <div class="datos">
-        <div class="sec1">
-            <label for="nombres">Nombres:</label>
-            <input type="text" name="nombres" placeholder="Nombres" [(ngModel)]="cuadroNombres">
-            <label for="apellidos">Apellidos:</label>  
-            <input type="text" name="apellidos" placeholder="Apellidos" [(ngModel)]="cuadroApellidos"><br>
-            <label for="fechaNacimiento">Fecha de Nacimiento:</label>
-            <input type="date" name="fechaNacimiento" placeholder="Fecha de Nacimiento" [(ngModel)]="cuadroFechaNacimiento">
-            <label for="ci">Carnet de identidad:</label>
-            <input type="text" name="ci" placeholder="Carnet de identidad" [(ngModel)]="cuadroCI">
-            <label for="email">Correo electrónico:</label>
-            <input type="email" name="email" placeholder="Correo electrónico" [(ngModel)]="cuadroEmail">
-        </div>
-        <div class="sec2">
-            <label for="numeroCelular">Número de celular:</label>
-            <input type="text" name="numCelular" placeholder="Número de celular" [(ngModel)]="cuadroNumCelular">
-            <label for="colegio">Colegio:</label>
-            <input type="text" name="colegio" placeholder="Colegio" [(ngModel)]="cuadroColegio">
-            <label for="curso">Curso:</label>
-            <input type="text" name="curso" placeholder="Curso" [(ngModel)]="cuadroCurso">
-            <label for="departamento">Departamento:</label>
-            <select name="departamento" id="departamento" [(ngModel)]="cuadroDepartamento">
-                <option value="1">La Paz</option>
-                <option value="2">Cochabamba</option>
-                <option value="3">Santa Cruz</option>
-                <option value="4">Oruro</option>
-                <option value="5">Potosi</option>
-                <option value="6">Tarija</option>
-                <option value="7">Beni</option>
-                <option value="8">Pando</option>
-            </select>
-            <label for="provinicia">Provincia:</label>
-            <input type="text" name="provinicia" placeholder="Provincia" [(ngModel)]="cuadroProvincia">
-            <div class="botones">
-                <button class="btn">Cancelar</button>
-                <button class="btn">Siguiente</button>
+    <form>
+        <div class="datos">
+            <div class="sec1">
+                <label for="nombres">Nombres:</label>
+                <input type="text" name="nombres" placeholder="Nombres" [(ngModel)]="cuadroNombres">
+                <label for="apellidos">Apellidos:</label>  
+                <input type="text" name="apellidos" placeholder="Apellidos" [(ngModel)]="cuadroApellidos"><br>
+                <label for="fechaNacimiento">Fecha de Nacimiento:</label>
+                <input type="date" name="fechaNacimiento" placeholder="Fecha de Nacimiento" [(ngModel)]="cuadroFechaNacimiento">
+                <label for="ci">Carnet de identidad:</label>
+                <input type="text" name="ci" placeholder="Carnet de identidad" [(ngModel)]="cuadroCI">
+                <label for="email">Correo electrónico:</label>
+                <input type="email" name="email" placeholder="Correo electrónico" [(ngModel)]="cuadroEmail">
             </div>
-        </div>
-    </div>
+            <div class="sec2">
+                <label for="numeroCelular">Número de celular:</label>
+                <input type="text" name="numCelular" placeholder="Número de celular" [(ngModel)]="cuadroNumCelular">
+                <label for="colegio">Colegio:</label>
+                <input type="text" name="colegio" placeholder="Colegio" [(ngModel)]="cuadroColegio">
+                <label for="curso">Curso:</label>
+                <input type="text" name="curso" placeholder="Curso" [(ngModel)]="cuadroCurso">
+                <label for="departamento">Departamento:</label>
+                <select name="departamento" id="departamento" [(ngModel)]="cuadroDepartamento">
+                    <option value="1">La Paz</option>
+                    <option value="2">Cochabamba</option>
+                    <option value="3">Santa Cruz</option>
+                    <option value="4">Oruro</option>
+                    <option value="5">Potosi</option>
+                    <option value="6">Tarija</option>
+                    <option value="7">Beni</option>
+                    <option value="8">Pando</option>
+                </select>
+                <label for="provinicia">Provincia:</label>
+                <input type="text" name="provinicia" placeholder="Provincia" [(ngModel)]="cuadroProvincia">
+                <div class="botones">
+                    <button type="reset" class="btn">Cancelar</button>
+                    <button type="submit" class="btn" (click)="agregarCompetidor()" >Siguiente</button>
+                </div>
+            </div>
+        </div>  
+    </form>
 </div>
+
+<br><br>
+

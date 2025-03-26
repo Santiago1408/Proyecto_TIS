@@ -3,3 +3,19 @@
 </div>
 
 <app-inscipcion-competidor></app-inscipcion-competidor>
+
+<div class="registros">
+  @for (competidor of competidores; track competidor.id){
+    <h2>Competidor</h2>
+      <p>Nombres: {{competidor.nombres}}</p>
+      <p>Apellidos: {{competidor.apellidos}}</p>
+      <p>Fecha de Nacimiento: {{competidor.fechaNacimiento}}</p>
+      <p>Carnet de identidad: {{competidor.ci}}</p>
+      <p>Correo electrónico: {{competidor.email}}</p>
+      <p>Número de celular: {{competidor.numCelular}}</p>
+      <p>Colegio: {{competidor.colegio}}</p>
+      <p>Curso: {{competidor.curso}}</p>
+      <p>Departamento: {{competidor.departamento}}</p>
+      <p>Provincia: {{competidor.provincia}}</p>
+  }
+</div>
